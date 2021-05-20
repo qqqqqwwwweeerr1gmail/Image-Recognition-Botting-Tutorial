@@ -13,12 +13,17 @@ print(pyautogui.size())
 pyautogui.onScreen(x, y)  # True if x & y are within the screen.
 print(pyautogui.onScreen(x, y))
 
-a = pyautogui.locateOnScreen('./20210518140945.png', grayscale=True, confidence=0.8)
+pa = r'D:\GitHub\Image-Recognition-Botting-Tutorial\TextDetection\111.png'
+
+a = pyautogui.locateOnScreen('pa', grayscale=True, confidence=0.8)
 print(a)
 b = pyautogui.locateAllOnScreen('./20210518140945.png', confidence=0.8)
 print(b)
 for i in pyautogui.locateAllOnScreen('./20210518140945.png', confidence=0.8):
     print('a')
+
+
+
     print(i)
     click(i.left+10, i.top+10)
     break
